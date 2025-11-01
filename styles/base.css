@@ -1,0 +1,129 @@
+:root {
+    --def-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --bg-color-1: rgb(109, 0, 0);
+    --bg-color-2: rgba(43, 0, 0, 0.877);
+    --bg-color-3: #302e2e;
+    --bg-color-4: #494646;
+    --def-font-clr: #f1f1f1;
+    --def-pad: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--def-font)
+}
+
+body {
+    height: auto;
+    color: var(--def-font-clr);
+}
+
+header {
+    height: fit-content;
+    background-color: var(--bg-color-1);
+    height: 6rem;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+nav {
+    background-color: var(--bg-color-2);
+    margin-top: 1.68rem;
+    height: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav a {
+    font-size: larger;
+    font-weight: 500;
+    color: var(--def-font-clr);
+    text-decoration: none;
+    padding-bottom: 5px;
+}
+
+nav a:hover {
+    transform: scale(1.1);
+}
+
+header span {
+    font-size: x-large;
+    font-weight: 500;
+}
+
+section {
+    color: var(--bg-color-3);
+}
+
+section h2 {
+    background-color: var(--bg-color-1);
+    color: var(--def-font-clr);
+}
+
+main {
+    display: grid;
+    grid-template-columns: .5fr 1fr 1fr;
+    grid-template-rows: 50px 1fr 50px;
+}
+
+.card {
+    border-radius: 12px;
+    border: 1px solid var(--bg-color-3);
+    height: 100%;
+}
+
+.card h2 {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 5px;
+    text-align: center;
+}
+
+.me {
+    grid-column: 1 / 3;
+    margin: 0 10px 10px 10px;
+}
+
+.resources {
+    grid-column: 3 / 4;
+    margin: 0 10px 10px 10px;
+}
+
+.portrait {
+    float: right;
+    width: 150px;
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+}
+
+.flag {
+    float: left;
+    margin-top: 5vh;
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+}
+
+.bottom {
+    margin-top: 6vh;
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+}
+
+.top {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+
+.content {
+    padding: 10px;
+}
+
+.me .card .content {
+    display: grid;
+    grid-template-columns: 15% 60% 20%;
+    grid-template-rows: 1fr 1fr 1fr;
+}
