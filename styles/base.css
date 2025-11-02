@@ -22,7 +22,6 @@ body {
 }
 
 header {
-    height: fit-content;
     background-color: var(--bg-color-1);
     height: 6rem;
     text-align: center;
