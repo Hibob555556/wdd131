@@ -6,6 +6,7 @@
     --bg-color-3: #302e2e;
     --bg-color-4: #494646;
     --def-font-clr: #f1f1f1;
+    --contrast-font-clr: #262424;
     --def-pad: 10px;
 }
 
@@ -57,7 +58,7 @@ header span {
 }
 
 section {
-    color: var(--bg-color-3);
+    color: var(--contrast-font-clr);
 }
 
 section h2 {
@@ -86,7 +87,7 @@ footer {
 }
 
 h1 {
-    color: var(--bg-color-3);
+    color: var(--contrast-font-clr);
 }
 
 /* Card styles */
