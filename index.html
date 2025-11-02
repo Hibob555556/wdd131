@@ -9,11 +9,12 @@
         content="WDD 131 - Dynamic Web Fundamentals, Cayden Lunt, Dynamic Web Fundamentals, Homepage">
     <meta name="author" content="Cayden Lunt">
     <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
 </head>
 
 <body>
     <header>
-        <span>WDD 131 - Dynamic Web Fundamentals</span>
+        <span>WDD 131 - Dynamic Web Fundamentals - Cayden Lunt</span>
         <nav>
             <a href="https://www.linkedin.com/in/cayden-lunt-test-engineer" target="_blank">LinkedIn</a>
             <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
@@ -24,13 +25,13 @@
     </header>
 
     <main>
-        <h1>Cayden Lunt</h1>
-        <div class="me">
-            <section class="card">
-                <h2>About Me</h2>
-                <div class="content">
-                    <img src="images/caydenlunt.avif" alt="Portrait photo of Cayden Lunt" class="portrait">
-                    <p class="top">Hey! My name is Cayden. For work I am a Product Test Engineer and Developer. I enjoy
+        <!-- <h1>Cayden Lunt</h1> -->
+        <section class="card">
+            <h2>About Me</h2>
+            <div class="content">
+                <img src="images/caydenlunt.avif" alt="Portrait photo of Cayden Lunt" class="portrait">
+                <div class="left">
+                    <p>Hey! My name is Cayden. For work I am a Product Test Engineer and Developer. I enjoy
                         photography
                         and
                         seeing how far I can take dirt roads before they end in my Jeep. I enjoy writing code in C# and
@@ -45,16 +46,18 @@
                         capabilities at work by being able to directly point sensors at the sun which allows me to test
                         for
                         longer periods each day.</p>
+                    <h3>Utah, United States</h3>
                     <img src="images/utah_flag.avif" alt="Utah's state flag" class="flag">
-                    <p class="bottom">Utah is a beautiful state full of nature and wildlife. You can see everything from
+                    <p class="state-content">Utah is a beautiful state full of nature and wildlife. You can see
+                        everything from
                         desert, to snow capped mountains, and everything in between. Utah is known for its 5 national
                         parks including Zion, Arches, Canyonlands, Bryce Canyon, Capitol Reef. Utah was admitted into
                         the Union on January 4th 1896 making it the 45th state. Preceding this, the Pioneers reached and
                         settled utah in 1847.
                     </p>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
         <div class="resources">
             <section class="card">
                 <h2>Web Dev Resources</h2>
@@ -64,7 +67,7 @@
 
     <footer>
         <p>&copy;<span id="currentyear"></span> | Cayden Lunt | Utah, United States</p>
-        <p id="lastModified"></p>
+        <p id="lastModified" class="lastModified"></p>
     </footer>
 </body>
 
