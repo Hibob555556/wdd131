@@ -12,15 +12,16 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Momo+Trust+Sans:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles/media-query.css">
-    <link rel="stylesheet" href="styles/media-query-large.css">
+    <link rel="stylesheet" href="styles/bom.css">
+    <script src="scripts/bom.js" defer></script>
 </head>
 
 <body>
     <main>
         <label for="favchap">Enter Book and Chapter: </label>
         <input type="text" id="favchap" placeholder="Alma 5">
-        <button type="submit" id="button">Add Chapter</button>
+        <button type="submit">Add Chapter</button>
+        <div id="message" class="err"></div>
         <ul id="list">
             <li id="entry"></li>
         </ul>

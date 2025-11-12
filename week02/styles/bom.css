@@ -58,6 +58,12 @@ li {
     justify-content: space-between;
 }
 
+.err span {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
 @media only screen and (min-width: 32.5em) {
     h1 {
         font-size: 2rem;
