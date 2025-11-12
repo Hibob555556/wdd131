@@ -1,0 +1,33 @@
+:root {
+    --m-width: 640px;
+    --def-margin: 1rem auto;
+    --def-padding: 5px;
+    --faint-border: 1px solid rgb(0 0 0 / 12%);
+    --def-background: rgb(123, 160, 195);
+    --light-background: rgb(220, 220, 220);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header,
+main,
+footer {
+    max-width: var(--m-width);
+    margin: var(--def-margin);
+    border: var(--faint-border);
+    padding: var(--def-padding);
+    background-color: var(--def-background);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+section {
+    background-color: var(--light-background);
+    padding: 1rem;
+}
