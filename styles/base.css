@@ -1,6 +1,7 @@
 /* Default Styles */
 :root {
     --def-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --pref-font: 'Duru Sans';
     --bg-color-1: rgb(109, 0, 0);
     --bg-color-2: rgba(43, 0, 0, 0.877);
     --bg-color-3: #302e2e;
@@ -13,7 +14,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: var(--def-font)
+    font-family: var(--pref-font), var(--def-font);
 }
 
 /* Element Styles */
