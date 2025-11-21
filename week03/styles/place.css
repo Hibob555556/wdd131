@@ -1,0 +1,122 @@
+:root {
+    --gray-333: #333;
+    --blue-500: #0060ee;
+    --blue-900: #1603ae;
+    --white: #fff;
+    --black: #000;
+    --transparent-white: #fdf3fd6d;
+    --def-font: "Duru Sans", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: var(--def-font);
+}
+
+header {
+    height: 13vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 15px
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+aside {
+    margin: 15px;
+    width: 15rem;
+    height: 15rem;
+}
+
+.container {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.separator {
+    height: 5vh;
+    width: 100%;
+    display: inherit;
+    margin-top: 18px;
+}
+
+.left {
+    position: absolute;
+    left: 15px;
+}
+
+.top {
+    top: 25px;
+}
+
+.right {
+    position: absolute;
+    right: 15px;
+}
+
+.bottom {
+    bottom: 25px;
+}
+
+.table {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    align-items: center;
+}
+
+table>tbody>td {
+    text-align: right;
+}
+
+table>tbody>tr>td:nth-child(1) {
+    font-weight: 700;
+    text-align: right;
+}
+
+/* background colors */
+.bg-gray-333 {
+    background-color: var(--gray-333);
+}
+
+.bg-blue-500 {
+    background-color: var(--blue-500);
+}
+
+.bg-blue-900 {
+    background-color: var(--blue-900);
+}
+
+.bg-white-transparent {
+    background-color: var(--transparent-white);
+}
+
+/* foreground colors */
+.fg-white {
+    color: var(--white);
+}
+
+.fg-black {
+    color: var(--black);
+}
+
+/* Alignments */
+.text-center {
+    text-align: center;
+}
+
+/* padding statements */
+.pd-4 {
+    padding: 15px;
+}
