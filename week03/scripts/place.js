@@ -41,8 +41,16 @@ for (let i = 0; i < label_len; i++) {
 // -------------------------------------------------------------------------
 const weather_tbody = document.querySelector('#weather-label-values');
 
-const w_labels = ["Temperature:", "Conditions:", "Wind:", "Wind Chill:"]
-const w_values = ["18 °F", "Snowy", "2.2 mph", "15 °F"]
+const TEMP = 18;
+const WIND = 5;
+
+// calc wind chill if applicable
+let wind_chill = "N/A";
+if (TEMP <= 50 && WIND > 3)
+    wind_chill = `${calculateWindChill(TEMP, WIND).toFixed(2)} °F`;
+
+const w_labels = ["Temperature:", "Conditions:", "Wind:", "Wind Chill:"];
+const w_values = [`${TEMP} °F`, "Snowy", `${WIND} mph`, `${wind_chill}`];
 const w_label_len = labels.length;
 
 elems = [];
@@ -72,6 +80,20 @@ for (let i = 0; i < w_label_len; i++) {
 
 // -------------------------------------------------------------------------
 
+
+// Weather Functions
+// -------------------------------------------------------------------------
+/**
+ * @description Calculates and returns the windchill in the desired temperature format
+ * @note unit = 0 ---> Fahrenheit unit = 1 ---> Celsius
+ * @param {number} temp Temperature in fahrenheit
+ * @param {number} wind Wind in mph
+ * @returns {number} Wind Chill
+ */
+function calculateWindChill(temp, wind) {
+    return 35.74 + 0.6215 * temp - 35.75 * Math.pow(wind, 0.16) + 0.4275 * temp * Math.pow(wind, 0.16);
+}
+// -------------------------------------------------------------------------
 
 
 // fill out the last modified and copyright information in the footer
