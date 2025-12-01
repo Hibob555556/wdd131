@@ -22,6 +22,10 @@ for (let i = 0; i < label_len; i++) {
     label_elem.textContent = label;
     value_elem.textContent = value;
 
+    // add padding to each element
+    label_elem.classList.add("pd-2");
+    value_elem.classList.add("pd-2");
+
     // create row
     table_body.append(label_elem);
     table_body.append(value_elem);
@@ -38,7 +42,7 @@ for (let i = 0; i < label_len; i++) {
 const weather_tbody = document.querySelector('#weather-label-values');
 
 const w_labels = ["Temperature:", "Conditions:", "Wind:", "Wind Chill:"]
-const w_values = ["value", "value", "value", "value"]
+const w_values = ["18 °F", "Snowy", "2.2 mph", "15 °F"]
 const w_label_len = labels.length;
 
 elems = [];
@@ -53,6 +57,10 @@ for (let i = 0; i < w_label_len; i++) {
     // set label and value text
     label_elem.textContent = label;
     value_elem.textContent = value;
+
+    // add padding to each element
+    label_elem.classList.add("pd-2");
+    value_elem.classList.add("pd-2");
 
     // create row
     table_body.append(label_elem);

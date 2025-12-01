@@ -1,0 +1,48 @@
+@media screen and (max-width: 800px) {
+    .container {
+        width: fit-content;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .left {
+        position: static;
+        display: flex;
+        justify-content: center;
+        height: fit-content;
+        min-width: fit-content;
+        background-color: transparent;
+    }
+
+    .right {
+        position: static;
+        display: flex;
+        justify-content: center;
+        height: fit-content;
+        min-width: fit-content;
+        background-color: transparent;
+    }
+
+    .overlay {
+        background-color: transparent;
+        box-shadow: none;
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+        position: static;
+    }
+
+    table {
+        margin-top: 0;
+    }
+
+    #data-label-values {
+        color: #fff;
+    }
+
+    #weather-label-values {
+        color: #fff;
+    }
+}

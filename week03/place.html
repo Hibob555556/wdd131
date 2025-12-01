@@ -13,6 +13,7 @@
         href="https://fonts.googleapis.com/css2?family=Momo+Trust+Sans:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/small-place.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -22,36 +23,39 @@
 </head>
 
 <body>
-    <header class="header bg-blue-500">
-        <h1 class="fg-white pd-4">Place Title</h1>
-        <div class="bg-blue-900 separator"></div>
+    <header class="mb-4">
+        <h1 class="fg-white pd-4">Utah</h1>
     </header>
 
-    <main class="bg-blue-900">
+    <main class="text-center">
         <div class="container">
             <picture>
-                <div class="hero">
-                    <source srcset="images/antelope-island-small.avif" media="(max-width: 926px)">
-                    <source srcset="images/antelope-island-medium.avif" media="(max-width: 1295px)">
-                    <img src="images/antelope-island-large.avif">
-                </div>
+                <source srcset="images/arch-small.webp" media="(max-width: 800px)">
+                <source srcset="images/arch-medium.webp" media="(max-width: 1295px)">
+                <img src="images/arch-large.webp" alt="Antelope Island">
             </picture>
             <aside class="left top bg-white-transparent">
-                <!-- Data -->
-                <h2 class="fg-black">Data</h2>
-                <div class="table">
-                    <table class="fg-black">
-                        <tbody id="data-label-values"></tbody>
-                    </table>
+                <div class="container">
+                    <!-- Data -->
+                    <h2 class="fg-white overlay shadow">Data</h2>
+                    <div class="table">
+                        <table class="fg-black">
+                            <tbody id="data-label-values"></tbody>
+                        </table>
+                    </div>
                 </div>
             </aside>
+
             <aside class="right bottom bg-white-transparent">
-                <!-- Weather -->
-                <h2 class="fg-black">Weather</h2>
-                <div class="table">
-                    <table class="fg-black">
-                        <tbody id="weather-label-values"></tbody>
-                    </table>
+                <div class="container">
+                    <!-- Data -->
+                    <h2 class="fg-white overlay shadow">Weather&nbsp;<p class="header-icon">🌨️</p>
+                    </h2>
+                    <div class="table">
+                        <table class="fg-black">
+                            <tbody id="weather-label-values"></tbody>
+                        </table>
+                    </div>
                 </div>
             </aside>
         </div>
