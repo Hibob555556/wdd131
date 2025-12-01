@@ -127,8 +127,9 @@ table>tbody>tr>td:nth-child(1) {
 }
 
 .snowflake::after {
-    content: url('/images/snowflake.svg');
+    content: url('../images/snowflake.svg');
     margin-left: 20px;
+    height: 30px;
 }
 
 @keyframes breath {
