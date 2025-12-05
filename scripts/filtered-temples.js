@@ -68,21 +68,21 @@ const temples = [
         location: "Baton Rouge, Louisiana",
         dedicated: "2000, July, 16",
         area: 10890,
-        imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/baton-rouge-louisiana-temple/baton-rouge-louisiana-temple-7139.jpg"
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/baton-rouge-louisiana/320x200/3-a75beca22300a3263bd47fba03b5b0d1b5ca0753.jpeg"
     },
     {
         templeName: "Perth Australia Temple",
         location: "Yokine, Western Australia",
         dedicated: "2001, May, 20",
         area: 10700,
-        imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/perth-australia-temple/perth-australia-temple-34989.jpg"
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/perth-australia/200x200/perth-australia-lds-temple-1143774-wallpaper.jpg"
     },
     {
         templeName: "Tokyo Japan Temple",
         location: "Minamiazabu, Tokyo Japan",
         dedicated: "1980, October, 27-29",
         area: 10700,
-        imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/tokyo-japan-temple/tokyo-japan-temple-26340.jpg"
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/tokyo-japan/200x320/tokyo_japan_temple-evening.jpeg"
     }
 ];
 
@@ -145,6 +145,7 @@ class Temple {
         let img = document.createElement('img');
         img.setAttribute('src', this.url);
         img.setAttribute('alt', "Temple photo");
+        img.setAttribute('loading', 'lazy');
 
         // create card
         card.appendChild(card_head);
@@ -155,15 +156,49 @@ class Temple {
     }
 }
 
-temples.forEach(element => {
-    console.log(element["templeName"]);
-    console.log(element["location"]);
-    console.log(element["dedicated"]);
-    console.log(element["area"]);
-    console.log(element["imageUrl"]);
-    let container = document.querySelector('#container');
-    let t = new Temple(element["templeName"], element["location"], element["dedicated"],
-        element["area"], element["imageUrl"]);
-    let card = t.createCard();
-    container.appendChild(card);
-});
+function pop_temples(filter) {
+    const container = document.querySelector('#container');
+    container.innerHTML = "";
+
+    let templesArray = [];
+    const OLD = 1900;
+    const NEW = 2000;
+    const LARGE = 90000;
+    const SMALL = 10000;
+
+    switch (filter) {
+        case "old":
+            templesArray = temples.filter(temple => parseInt(temple.dedicated.split(',')[0]) < OLD);
+            break;
+
+        case "new":
+            templesArray = temples.filter(temple => parseInt(temple.dedicated.split(',')[0]) > NEW);
+            break;
+
+        case "large":
+            templesArray = temples.filter(temple => temple.area > LARGE);
+            break;
+
+        case "small":
+            templesArray = temples.filter(temple => temple.area < SMALL);
+            break;
+
+        // assume "home" filter if no valid filter is applied
+        default:
+            templesArray = temples;
+            break;
+    }
+
+    templesArray.forEach(element => {
+        let t = new Temple(element["templeName"], element["location"], element["dedicated"],
+            element["area"], element["imageUrl"]);
+        let card = t.createCard();
+        container.appendChild(card);
+    });
+}
+
+const qry = window.location.search;
+const prms = new URLSearchParams(qry);
+const filter = prms.get('filter');
+
+pop_temples(filter);
