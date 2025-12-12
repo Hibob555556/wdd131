@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review</title>
+    <meta name="description"
+        content="WDD 131 - Dynamic Web Fundamentals, Cayden Lunt, Dynamic Web Fundamentals, product review form">
+    <meta name="author" content="Cayden Lunt">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/form.js" defer></script>
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+    <body>
+        <form method="get" action="review.html">
+            <div class="flex-display">
+                <!-- Product -->
+                <label for="product-name">Product Name</label>
+                <select id="product-name">
+                    <option disabled selected>Select a Product...</option>
+                </select>
+
+                <!-- Rating -->
+                <span>Product Rating</span>
+                <div class="stars">
+                    <input type="radio" id="fivestar" name="stars" value="5" required><label for="fivestar"></label>
+                    <input type="radio" id="fourstar" name="stars" value="4" required><label for="fourstar"></label>
+                    <input type="radio" id="threestar" name="stars" value="3" required><label for="threestar"></label>
+                    <input type="radio" id="twostar" name="stars" value="2" required><label for="twostar"></label>
+                    <input type="radio" id="onestar" name="stars" value="1" required><label for="onestar"></label>
+                </div>
+
+                <!-- Date of installation -->
+                <label for="date-installed">Date of Installation</label>
+                <input type="date" id="date-installed">
+
+                <!-- Useful features -->
+                <span>Which features did you find useful in the product? (Check all that apply)</span>
+                <div class="useful">
+                    <div class="checks">
+                        <input type="checkbox" title="durability" id="durability">
+                        <input type="checkbox" title="ease_of_use" id="ease_of_use">
+                        <input type="checkbox" title="performance" id="performance">
+                        <input type="checkbox" title="design" id="checkbox">
+                    </div>
+                    <div class="labels">
+                        <label for="durability">Durability</label>
+                        <label for="ease_of_use">Ease of Use</label>
+                        <label for="performance">Performance</label>
+                        <label for="checkbox">Design</label>
+                    </div>
+                </div>
+
+                <!-- Review -->
+                <label for="review">Written Review <a class="blue">(Optional)</a></label>
+                <textarea id="review"></textarea>
+
+                <!-- Customer name -->
+                <label for="name">Your Name <a class="blue">(Optional)</a></label>
+                <input type="text">
+
+                <!-- submit -->
+                <input type="submit" value="Post Review">
+            </div>
+        </form>
+    </body>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> | Cayden Lunt | Utah, United States</p>
+        <p id="lastModified" class="lastModified"></p>
+    </footer>
+</body>
+
+</html>

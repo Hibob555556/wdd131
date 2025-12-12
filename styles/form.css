@@ -1,0 +1,89 @@
+:root {
+    --gray-500: #3f3f3f;
+    --red-800: #5f0f0f;
+    --red-500: #ff3333;
+    --white-100: #fafafa;
+    --black-100: #000000;
+    --def-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --def-shadow: ;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header,
+footer {
+    background-color: var(--red-800);
+    color: var(--white-100);
+    text-align: center;
+}
+
+.flex-display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.useful {
+    width: 35%;
+}
+
+input,
+button,
+textarea,
+select {
+    width: 85%;
+    align-self: center;
+}
+
+.useful>input[type=checkbox] {
+    width: min-content;
+    justify-self: left;
+}
+
+form {
+    background-color: var(--red-500);
+}
+
+.stars {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+}
+
+.stars>label {
+    color: gold;
+    width: 30px;
+    height: 30px;
+    font-size: 2rem;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    caret-color: rgba(0, 0, 0, 0);
+    /* remove blinking cursor*/
+}
+
+.stars>label:hover {
+    color: #000;
+}
+
+.stars>label::before {
+    content: "\2606";
+}
+
+.stars input:checked~label::before {
+    content: "\2605";
+}
+
+input[type="radio"] {
+    display: none;
+    position: relative;
+    caret-color: rgba(0, 0, 0, 0);
+}
+
+.blue {
+    color: rgb(25 25 235);
+}
