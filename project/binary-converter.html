@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Buddy | Binary Converter</title>
+    <meta name="description"
+        content="WDD 131 - Dynamic Web Fundamentals, Cayden Lunt, Dynamic Web Fundamentals, Final, Binary Converter">
+    <meta name="author" content="Cayden Lunt">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main-small.css">
+    <link rel="stylesheet" href="styles/bin-convert.css">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/bin_convert.js" defer></script>
+</head>
+
+<body>
+    <header class="bg-red-800 fg-white-100 pt-6 pb-6 shadow">
+        <div class="container">
+            <div class="left"></div>
+            <div class="center">
+                <h1>Cayden Lunt - Binary Converter</h1>
+            </div>
+            <div class="right"></div>
+        </div>
+    </header>
+
+    <main class="fg-white-100 pt-6 pb-6 flex-center mt-6">
+        <div class="available-tools bg-red-500">
+            <div class="flex-center column subtle br-7-5 pb-4">
+                <div class="sub-head">
+                    <h2>Binary Converter</h2>
+                </div>
+                <div class="sub-body flex-center column">
+                    <input type="number" placeholder="Whole Number..." id="whole-input">
+                    <div class="output-container">
+                        <span class="flex row">Binary: <a id="output"></a>
+                            <div class="copy" id="copy">📋</div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> | Cayden Lunt | Utah, United States</p>
+        <p id="lastModified" class="lastModified"></p>
+    </footer>
+</body>
+
+</html>
