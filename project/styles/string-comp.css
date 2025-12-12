@@ -1,0 +1,28 @@
+input {
+    font-size: large;
+    width: 90%;
+}
+
+#output {
+    width: 75%;
+    text-align: center;
+    height: 55px;
+    padding-top: 10px;
+    border-radius: 7.5px;
+}
+
+#output>a {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1056px) {
+    .small-grid-row1-col2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    button {
+        width: 45%;
+    }
+}

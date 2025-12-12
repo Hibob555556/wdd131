@@ -53,6 +53,11 @@ nav a:hover {
     transform: scale(1.1);
 }
 
+li {
+    padding-top: 5px;
+    margin-left: 25px;
+}
+
 header span {
     font-size: x-large;
     font-weight: 500;
