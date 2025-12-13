@@ -29,6 +29,6 @@ function showUsername() {
     let mood = localStorage.getItem('mood');
     let m = ""
     if (mood)
-        m = `You are ${mood}`
-    HI_CONT.textContent = `Hello, ${user != null ? user : "User"}. ${m}.`;
+        m = `You are ${mood}.`
+    HI_CONT.textContent = `Hello, ${user != null ? user : "User"}. ${m}`;
 }
