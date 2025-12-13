@@ -26,7 +26,7 @@ footer {
     padding-top: 5vh;
     font-size: larger;
     font-weight: 500;
-    position: absolute;
+    position: sticky;
     bottom: 0;
     width: 100%;
 }
@@ -71,6 +71,11 @@ button:active {
     transform: scale(.95);
 }
 
+aside {
+    border-radius: 7.5px;
+    padding: 10px;
+}
+
 /* Class Styles */
 .divider {
     width: 85%;
@@ -79,6 +84,16 @@ button:active {
     background-color: var(--white-100);
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.entry {
+    text-align: center;
+    padding: 12px;
+}
+
+.entry>label {
+    padding-top: 10px;
+    padding-right: 10px;
 }
 
 .right {

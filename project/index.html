@@ -8,9 +8,9 @@
     <meta name="description"
         content="WDD 131 - Dynamic Web Fundamentals, Cayden Lunt, Dynamic Web Fundamentals, Final, Project Home">
     <meta name="author" content="Cayden Lunt">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/main-small.css">
-    <script src="scripts/getdates.js" defer></script>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/main-small.css">
+    <script src="/scripts/getdates.js" defer></script>
     <script src="/scripts/main.js" defer></script>
 </head>
 
@@ -27,7 +27,7 @@
         </div>
     </header>
 
-    <main class="fg-white-100 pt-6 pb-6 flex-center mt-6">
+    <main class="fg-white-100 pt-6 pb-6 flex-center mt-6 flex-center column">
         <div class="available-tools bg-red-500">
             <div class="flex-center column subtle br-7-5 pb-4">
                 <div class="sub-head">
@@ -54,15 +54,20 @@
                 </div>
             </div>
         </div>
-        <aside>
+        <aside class="fg-white-100 pb-6 flex-center mt-6 bg-red-500 flex-center column">
+            <div class="sub-head">
+                <h2>Settings</h2>
+            </div>
             <span>Enter your name to be greeted on each page.</span>
-            <label for="user_name">Name:</label>
-            <input type="text" placeholder="Name..." id="user_name">
+            <div class="entry flex-center">
+                <label for="user_name">Name:</label>
+                <input type="text" placeholder="Name..." id="user_name">
+            </div>
             <button id="save_name_btn">Save</button>
         </aside>
     </main>
 
-    <footer>
+    <footer class="overwrite-display">
         <p>&copy;<span id="currentyear"></span> | Cayden Lunt | Utah, United States</p>
         <p id="lastModified" class="lastModified"></p>
     </footer>
