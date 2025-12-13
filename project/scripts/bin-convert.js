@@ -12,7 +12,6 @@ function convertToBinary(num) {
 
 INPUT.addEventListener('keyup', () => {
     let number = Number(INPUT.value);
-    let number_str = INPUT.value;
     let binary = 0;
     console.log("WHOLE NUM VALIDATE:", Number.isInteger(number))
     if (Number.isInteger(number)) {

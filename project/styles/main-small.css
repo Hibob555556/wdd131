@@ -4,6 +4,16 @@
     }
 }
 
+@media screen and (max-width: 1356px) {
+    .output-container {
+        max-width: 100%;
+    }
+
+    #output {
+        overflow-x: scroll;
+    }
+}
+
 @media screen and (max-width: 1342px) {
     td {
         padding-left: 23px;
@@ -39,5 +49,21 @@
 
     .available-tools {
         min-width: 228px;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .left {
+        position: relative;
+        width: max-content;
+        align-self: center;
+        padding-right: 40px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center;
     }
 }

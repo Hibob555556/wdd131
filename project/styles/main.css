@@ -56,9 +56,10 @@ input {
 button {
     width: 35%;
     height: 35px;
-    border: none;
+    border: inset 1px var(--red-500);
     border-radius: 7.5px;
-    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.5);
+    background-color: var(--red-800);
+    color: var(--white-100);
 }
 
 button:hover {
@@ -151,12 +152,16 @@ button:active {
     margin-top: 25px;
 }
 
-.mb-6 {
-    margin-bottom: 25px;
-}
-
 .mt-4 {
     margin-top: 15px;
+}
+
+.mt-2 {
+    margin-top: 5px;
+}
+
+.mb-6 {
+    margin-bottom: 25px;
 }
 
 .mb-4 {

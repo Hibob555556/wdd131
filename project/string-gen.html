@@ -10,8 +10,10 @@
     <meta name="author" content="Cayden Lunt">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/main-small.css">
+    <link rel="stylesheet" href="styles/string-gen.css">
     <script src="scripts/getdates.js" defer></script>
     <script src="scripts/main.js" defer></script>
+    <script src="scripts/string-gen.js" defer></script>
 </head>
 
 <body>
@@ -38,6 +40,17 @@
                     <h2>
                         String Generator
                     </h2>
+                </div>
+                <div class="sub-body flex-center column">
+                    <input type="number" placeholder="Length..." class="mt-2 mb-4" id="len_in">
+                    <div class="divider"></div>
+                    <button id="generate">Generate String</button>
+                    <div class="out-container flex-center">
+                        <div class="output font-large bg-red-800 mt-6 mb-4 shadow" id="output">
+                            <div class="scroll" id="scroll">Output...</div>
+                        </div>
+                    </div>
+                    <button id="copy">Copy 📋</button>
                 </div>
             </div>
         </div>

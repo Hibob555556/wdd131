@@ -1,0 +1,27 @@
+a {
+    text-decoration: none;
+}
+
+.out-container {
+    width: 100%;
+}
+
+.output {
+    height: 156px;
+    max-height: 156px;
+    overflow-y: hidden;
+    border-radius: 7.5px;
+    padding: 3px;
+    width: 100%;
+}
+
+.scroll {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.copy:hover {
+    transform: scale(1.1);
+    cursor: copy;
+}
