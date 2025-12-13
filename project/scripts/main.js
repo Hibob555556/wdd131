@@ -23,5 +23,5 @@ try {
 
 function showUsername() {
     let user = localStorage.getItem('username')
-    HI_CONT.textContent = `Hello, ${user}`;
+    HI_CONT.textContent = `Hello, ${user != null ? user : "User"}`;
 }
