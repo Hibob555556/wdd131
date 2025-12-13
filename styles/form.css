@@ -93,6 +93,10 @@ form {
     align-self: center;
 }
 
+.center-header {
+    text-align: center;
+}
+
 .form {
     width: 30%;
     background-color: var(--red-500);
@@ -196,4 +200,17 @@ input[type=submit] {
 input[type=submit]:hover {
     transform: scale(1.05);
     cursor: pointer;
+}
+
+@media screen and (max-width: 550px) {
+    input[type=submit] {
+        width: 75%;
+        height: 35px;
+        border-radius: 7.5px;
+        border: 1px outset black;
+    }
+
+    .slim {
+        width: 75%;
+    }
 }
