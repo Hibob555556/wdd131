@@ -14,22 +14,27 @@
 </head>
 
 <body>
-    <header>
-        <h1>Product Review</h1>
+    <header class="bg-red-800 fg-white-100 pt-6 pb-6 shadow">
+        <div class="container">
+            <div class="center">
+                <h1>Cayden Lunt - Site Plan</h1>
+            </div>
+        </div>
     </header>
 
     <body>
         <form method="get" action="review.html">
-            <div class="flex-display">
+            <div class="flex-display shadow bg-red-500 radius pd-2 mt-6">
                 <!-- Product -->
-                <label for="product-name">Product Name</label>
-                <select id="product-name">
-                    <option disabled selected>Select a Product...</option>
+                <label for="product-name" class="bold">Product Name</label>
+                <select id="product-name" class="mb-4 slim center input-style" required>
+                    <option value="" disabled selected>Select a Product...</option>
+                    <option value="1" name="product1" required>Product 1</option>
                 </select>
 
                 <!-- Rating -->
-                <span>Product Rating</span>
-                <div class="stars">
+                <span class="bold">Product Rating</span>
+                <div class="stars mb-4">
                     <input type="radio" id="fivestar" name="stars" value="5" required><label for="fivestar"></label>
                     <input type="radio" id="fourstar" name="stars" value="4" required><label for="fourstar"></label>
                     <input type="radio" id="threestar" name="stars" value="3" required><label for="threestar"></label>
@@ -38,36 +43,42 @@
                 </div>
 
                 <!-- Date of installation -->
-                <label for="date-installed">Date of Installation</label>
-                <input type="date" id="date-installed">
+                <label for="date-installed" class="bold">Date of Installation</label>
+                <input type="date" id="date-installed" class="mb-4 slim center input-style" required>
 
                 <!-- Useful features -->
-                <span>Which features did you find useful in the product? (Check all that apply)</span>
-                <div class="useful">
-                    <div class="checks">
-                        <input type="checkbox" title="durability" id="durability">
-                        <input type="checkbox" title="ease_of_use" id="ease_of_use">
-                        <input type="checkbox" title="performance" id="performance">
-                        <input type="checkbox" title="design" id="checkbox">
-                    </div>
-                    <div class="labels">
-                        <label for="durability">Durability</label>
-                        <label for="ease_of_use">Ease of Use</label>
-                        <label for="performance">Performance</label>
-                        <label for="checkbox">Design</label>
-                    </div>
+                <span class="bold">Which features did you find useful in the product? (Check all that apply)</span>
+                <div class="useful mb-4 center text-center">
+                    <table>
+                        <tr>
+                            <td><input type="checkbox" title="durability" id="durability"></td>
+                            <td><label for="durability">Durability</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" title="ease_of_use" id="ease_of_use"></td>
+                            <td><label for="ease_of_use">Ease of Use</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" title="performance" id="performance"></td>
+                            <td><label for="performance">Performance</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" title="design" id="checkbox"></td>
+                            <td><label for="checkbox">Design</label></td>
+                        </tr>
+                    </table>
                 </div>
 
                 <!-- Review -->
-                <label for="review">Written Review <a class="blue">(Optional)</a></label>
-                <textarea id="review"></textarea>
+                <label for="review" class="bold">Written Review <a class="blue">(Optional)</a></label>
+                <textarea id="review" class="mb-4"></textarea>
 
                 <!-- Customer name -->
-                <label for="name">Your Name <a class="blue">(Optional)</a></label>
-                <input type="text">
+                <label for="name" class="bold">Your Name <a class="blue">(Optional)</a></label>
+                <input type="text" class="mb-4 slim center input-style" placeholder="Name...">
 
                 <!-- submit -->
-                <input type="submit" value="Post Review">
+                <input type="submit" value="Post Review" class="center">
             </div>
         </form>
     </body>
