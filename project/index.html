@@ -59,11 +59,17 @@
                 <h2>Settings</h2>
             </div>
             <span class="fg-black-100">Enter your name to be greeted on each page.</span>
-            <div class="entry flex-center">
-                <label for="user_name" class="fg-black-100">Name:</label>
-                <input type="text" placeholder="Name..." id="user_name">
-            </div>
-            <button id="save_name_btn">Save</button>
+            <form method="get">
+                <div class="entry flex-center">
+                    <label for="user_name" class="fg-black-100">Name:</label>
+                    <input type="text" placeholder="Name..." id="user_name">
+                </div>
+                <div class="entry flex-center">
+                    <label for="user_mood">Mood:</label>
+                    <input type="text" placeholder="Mood..." id="user_mood">
+                </div>
+                <button id="save_name_btn">Save</button>
+            </form>
         </aside>
     </main>
 
