@@ -1,12 +1,15 @@
-.output-container {
+.output {
     margin-top: 25px;
+    width: auto;
+    border-radius: 7.5px;
+    padding: 2px;
 }
 
 a {
     text-decoration: none;
 }
 
-.output-container>span {
+.output>span {
     font-size: larger;
 }
 
